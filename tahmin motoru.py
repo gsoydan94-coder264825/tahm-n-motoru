@@ -33,7 +33,7 @@ HEADERS = {'x-rapidapi-host': "v3.football.api-sports.io", 'x-rapidapi-key': API
 @st.cache_data(ttl=1800)
 def dev_bulten_cek():
     bugun = datetime.date.today().strftime('%Y-%m-%d')
-    url = f"https://api-sports.io{bugun}"
+    url = "https://api-sports.io"
     try:
         response = requests.get(url, headers=HEADERS).json()
         maclar = response.get('response', [])
